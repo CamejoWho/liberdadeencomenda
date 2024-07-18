@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel = "stylesheet" href = "style.css">
+    <link href="script.js">
 </head>
 <body>
     <header>
@@ -14,11 +15,11 @@
         <h1>Liberdade Fluída</h1>
     </header> 
     <main>
-        <div id="formulario">
+        <div id="caminhoformulario">
             <h1>Acessórios exclusivos feito <span class="colorandfont"> por </span>você, <span class="colorandfont">para </span>você</h1>
             <p>Descubra a liberdade de criar acessórios que são verdadeiramente seus. 
             Visite-nos e comece a desenhar sua próxima peça hoje mesmo</p> 
-            <button>Crie <span id="buttonletter">já</span></button>
+            <button onclick="document.getElementById('formulario').scrollIntoView()">Crie <span id="buttonletter">já</span></button>
         </div>
         <div id="foto">
             <img src= "img/colar3cores.png" alt = "foto de um colar"/>
@@ -45,15 +46,43 @@
         referências e participe de todo o processo de produção, garantindo
         que cada peça seja feita por você e para você.</p>
     </section>
+    <section id="formulario">
+        <div id="parteInterativa">
+        <h1>Vamos <span class="colorandfont"> Criar</span></h1>
+        <p>Escolha a cor e ordem das miçangas para produzir uma pulseira exclusiva</p>
+            <button>Desfazer</button>
+            <button>Finalizar</button>
+        <div id ="cadastro">
+        <h1>Gostou da sua criação?</h1>
+        <p>Quer se manter por dentro das novidades ou receber mimos feitos especialmente para você? Faça seu cadastro</p>
+        <form id="form-cadastro" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="sugestoes">Sugestões:</label>
+                <textarea id="sugestoes" name="sugestoes" rows="4"></textarea>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        </div>
+    </section>
     <footer>
         <img src="img/intagramlogo.png" height="30px" >
         <h5>Fale conosco</h5>
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-          </form> 
     </footer>
 </body>
 </html>
