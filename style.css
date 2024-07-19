@@ -110,6 +110,48 @@ main {
         line-height: 1.6; /* Ajusta o espaçamento entre linhas para melhorar a legibilidade */
     }
 }
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: black; /* Cor lilás */
+    margin-bottom: 20px;
+}
+
+.seletor-cor {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.paleta-cores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.micanga {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+}
 #formulario {
     max-width:100%;
     width:800px;
